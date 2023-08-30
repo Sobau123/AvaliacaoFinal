@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git e GitHub</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="container">
-            <ul class="flex esp menu ">
-                <li><a href="home.html" class="nav-item">Inicial</a></li>
-                <li><a href="hospedagem.html" class="nav-item">Hospedagem</a></li>
-                <li><a href="github.html" class="nav-item">Git e Github</a></li>
-                <li><a href="githubpages.html" class="nav-item">Github Pages</a></li>
-                <li><a href="portifolio.html" class="nav-item">Portifólio</a></li>
-            </ul>
-        </nav>
-    </header>
-    <br>
-    <main>
-        <h1>Git e GitHub</h1>
-    </main>
-    <hr>
-    <h3>O que é ?</h3>
-    <p>- É a ferramenta de versionamento local, que salva o estado do arquivo na hora do versionamento e se o arquivo não houver alterações ele cria um link simbólico para o arquivo não editado.</p>
-    <img src="assets/img/git.png" alt="icone do git" height="100" width="200">
-    <h3>Como usa e configura ?</h3>
-    <p>- </p>
+    <div class="esp">
+        <header>
+            <nav class="container">
+                <ul class="flex esp menu ">
+                    <li><a href="index.html" class="nav-item">Inicial</a></li>
+                    <li><a href="hospedagem.html" class="nav-item">Hospedagem</a></li>
+                    <li><a href="git1.html" class="nav-item">Git Bash</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="githubpages.html" class="nav-item">Github Pages</a></li>
+                    <li><a href="portifolio.html" class="nav-item">Portifólio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <main>
+            <h1>GitHub</h1>
+        </main>
+        <hr>
+        <h3>O que é ?</h3>
+        <p>É um serviço que usa o Git Bash para versionamento, ou seja, é um local de armazenamento de códigos /
+            repositório remoto.</p>
+        <img src="assets/img/github.png" alt="GitHub" width="200" height="100">
+        <hr>
+        <h3>Para que é usado ?</h3>
+        <p>Pode usado para impresas que mexam em sites possuindo um tipo de separação de trabalhos onde possue vários
+            tipos de setores como: </p>
+        <h6>Main (É a principal ou seja a parte onde vai ser liberado para os clientes / público-alvo)</h6>
+        <h6>Release/Hml (É o termino do site onde é revisado para ser liberado para a main)</h6>
+        <h6>Dev (É o desenvolvimento ou seja onde terá os ajustes e criação do site)</h6>
+        <h6>BugFix (É onde arruma os erros no sistema ou no site)</h6>
+        <h6>Feature (É onde a maioria das empresas menos usa)</h6>
+        <img src="assets/img/Captura de tela 2023-08-30 144948.png" alt="branches" width="550" height="186">
+        <hr>
+        <h3>Como configura a chave SSH: </h3>
+        <h4>Para criar sua chave SSH teremos a seguinte ordem: </h4>
+        <h5>Verificar se existe chave</h5> 
+        <h6>$ ssh.ls -al ~/.ssh</h6>
+        <br>
+        <h5>Criar uma nova chave. (ID)</h5>
+        <h6>$ ssh-keygen -t ed25519 -C "Seu e-mail usado pra configura o Git Bash"</h6>
+        <br>
+        <h5>Inicializar agente-ssh.</h5>
+        <h6>$ eval "$(ssh-agent -s)"</h6>
+        <br>
+        <h5>Adicionar chave ssh ao agente.</h5>
+        <h6>$ ssh-add ~/.ssh/id_ed25519</h6>
+        <br>
+        <h5>Copiar chave ssh.</h5>
+        <h6>$ clip < ~/.ssh/id_ed25519.pub Adicionar chave no github Vai no Github, procure Settings, depois SSH and GPG keys, agora New SSH key, coloque um titulo adequado ao branch e aperte Ctrl+V no ssh e crie ossh. </h6>
+        <br>
+        <h5>Adicionar chave no github</h5>
+        <h6>Vai no Github, procure Settings, depois SSH and GPG keys, agora New SSH key, coloque um titulo adequado ao branch e aperte Ctrl+V no ssh e crie o ssh.</h6>
+        <br>
+        <h5>Testar conexão</h5>
+        <h6>$ ssh -T git@github.com em seguida perguntara se você quer autoriza colocar a chave no Github se você quiser digite "yes" se não digite "no" .</h6>
+        <hr>
+        <h3>Para criar um repositório e conseguir mexer no arquivo terá que: </h3>
+        <p>Primeiro - entrar no GitHub e no lado de "Top Repositories" terá um botão escrito "New" onde você entrará na tela de novo repositório</p>
+        <p>Segundo - colocar um nome pro seu repositório e uma descrição e marcar o public e o add README file e depois clicar em "create repository"</p>
+        <p>Terceiro - clicar em "<> code" e ir em SSH aonde terá embaixo "git@github.com..." onde você copiará isso</p>
+        <p>Quarto - Você vai ir no Git Bash e usar o código "$ cd Documents" (Para entrar na sua pasta Documents) e depois usar "$ git clone para ter seu repositório na pasta Documents" se você não lembra o nome do repositório pode usar o comando "$ ls (Dentro da pasta Documents para ver o nome da pasta do repositório)" e então usar "$ cd "Nome do repositório" para entrar na pasta do repositório e então usar "$ code ." para entrar no Visual Studio Code.</p>   
+        <hr> 
+    </div>
 </body>
+
 </html>

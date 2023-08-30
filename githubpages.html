@@ -1,28 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Pages</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav class="container">
-            <ul class="flex esp menu ">
-                <li><a href="home.html" class="nav-item">Inicial</a></li>
-                <li><a href="hospedagem.html" class="nav-item">Hospedagem</a></li>
-                <li><a href="github.html" class="nav-item">Git e Github</a></li>
-                <li><a href="githubpages.html" class="nav-item">Github Pages</a></li>
-                <li><a href="portifolio.html" class="nav-item">Portifólio</a></li>
-            </ul>
-        </nav>
-    </header>
-    <br>
-    <main>
-        <h1>GitHub Pages</h1>
-    </main>
-    <hr>
+    <div class="esp">
+        <header>
+            <nav class="container">
+                <ul class="flex esp menu ">
+                    <li><a href="index.html" class="nav-item">Inicial</a></li>
+                    <li><a href="hospedagem.html" class="nav-item">Hospedagem</a></li>
+                    <li><a href="git1.html" class="nav-item">Git Bash</a></li>
+                    <li><a href="github.html">GitHub</a></li>
+                    <li><a href="githubpages.html" class="nav-item">Github Pages</a></li>
+                    <li><a href="portifolio.html" class="nav-item">Portifólio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <main>
+            <h1>GitHub Pages</h1>
+        </main>
+        <hr>
+        <h3>Para que serve ?</h3>
+        <h6>Fornece suporte para sites estáticos, básicos um exemplo um home page</h6>
+        <img src="assets/img/pages.png" alt="GitHub Pages">
+        <hr>
+        <h3>Como colocar seu repositório no GitHub Pages</h3>
+        <p>Primeiro - Acesse seu repositório estático e clique em settings(configurações)</p>
+        <p>Segundo - Clique em pages selecione a branch para publicar e salve em seguida clique em "visit site"(visitar o site).</p>
+        <br>
+        <h3>Como criar um exemplo de React</h3>
+        <h5>Onde será referente ao estilo react e para configura será feito:</h5>
+        <p>Primeiro - Crie um novo repositório com o nome "teste-react" público e com README e depois execute as funções de git clone (que tem uma explicação na página de "GitHub")</p>
+        <p>Segundo - Dentro do terminal do VScode digite "npx create-react-app" depois adicione na raiz do projeto um index.html(com o básico do HTML) e então depois suba todos os arquivos e commit.(Para ver se já está funcionando seu react basta colocar no terminal do VScode "npm start" e se aparacer um símbolo de química quer dizer que está funcionando)</p>
+        <p>Terceiro - Para colocar no GitHub Pages você não poderá colocar a branch da main se não aparecerá seu README então você terá que ir na raiz denovo e criar uma pasta ".github" dentro dela uma pasta "workflows" e dentro dessa um arquivo "build.yml" para ver o que acontecerá nas actions basta commitar e ver nas actions no GitHub e ver se está dando build e deploy</p>
+        <p>Quarto - um possível erro que pode acontecer é o 403-sem permissão mas para corrigir é simples basta ir no GitHub depois em settings no seu repositório de teste-react clicar em "Actions" depois "General" e então procurar por "Workflow permissions" e marcar "Read and write permissions" e "Allow GitHub Actions to create and approve pull requests" e estará resolvido.</p>
+        <p>Quinto - Mas não acabou ainda no GitHub Pages aparacerá outra branch no qual será selecionada "gh-pages" mas não funcionará pois não está ainda configurado na pasta certa, então teremos que ir no VScode denovo e ir em "package.json" e embaixo de version criar "homepage(entre aspas): "teste-react/"" e então basta commitar denovo pro GitHub e estará tudo pronto</p>
+        <img src="assets/img/emoji.png" alt="joinha" width="200" height="170">
+        <hr>
+    </div>
 </body>
+
 </html>
